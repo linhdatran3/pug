@@ -1,0 +1,45 @@
+.todo {
+  padding-top: rem(42);
+
+  @include mq($BREAKPOINT-SM) {
+    padding-top: rem(74);
+  }
+  .head {
+    margin-bottom: rem(16);
+    color: $trip-color-4;
+    font-weight: 600;
+  }
+}
+
+
+
+.todo__title {
+  margin-bottom: rem(73);
+
+  @include mq($BREAKPOINT-SM) {
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 {
+    padding-right: rem(35);
+    margin-bottom: rem(36);
+    @include mq($BREAKPOINT-SM) {
+      width: rem(509);
+    }
+  }
+
+  .sub-title {
+    margin-bottom: rem(36);
+    @include mq($BREAKPOINT-SM) {
+      width: rem(430);
+    }
+  }
+}
+
+.todo__list-cards {
+  @include mq($BREAKPOINT-SM) {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+}

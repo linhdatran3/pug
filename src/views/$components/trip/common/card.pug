@@ -1,0 +1,9 @@
+mixin card(item)
+  <div class="card">
+    <img src="!{item.imgUrl}" alt="!{item.imgUrl}" class="card__image"/>
+    <h3 class="card__title">!{item.title}</h3>
+    <p class="card__sub-title">orem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <div class="card__button">
+      +button({text:'learn more',type:'btn-outline'})
+    </div>
+  </div>

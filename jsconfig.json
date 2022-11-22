@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es6",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/scripts/*"]
+    }
+  },
+  "exclude": ["node_modules", "gulpfile.js"]
+}

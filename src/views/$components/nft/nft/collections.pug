@@ -1,0 +1,59 @@
+-
+  const collections = [{
+    imgUrl: "images/nft/ice-bear.jpg",
+    name: "Moonbirds",
+    des: "Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis fringilla pulvinar nibh diam sit.",
+  },
+  {
+    imgUrl: "images/nft/ice-bear-1.jpg",
+    name: "Clone X - X Takashi Murakami",
+    des: "Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis fringilla pulvinar nibh diam sit.",
+  },
+  {
+    imgUrl: "images/nft/ice-bear-9.jpg",
+    name: "Mutant Ape Yacht Club",
+    des: "Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis fringilla pulvinar nibh diam sit.",
+  },
+  {
+    imgUrl: "images/nft/ice-bear-3.jpg",
+    name: "Moonbirds",
+    des: "Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis fringilla pulvinar nibh diam sit.",
+  },
+  {
+    imgUrl: "images/nft/ice-bear-4.jpg",
+    name: "Clone X - X Takashi Murakami",
+    des: "Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis fringilla pulvinar nibh diam sit.",
+  },
+  {
+    imgUrl: "images/nft/ice-bear-5.jpg",
+    name: "Mutant Ape Yacht Club",
+    des: "Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis fringilla pulvinar nibh diam sit.",
+  },
+  {
+    imgUrl: "images/nft/ice-bear-6.jpg",
+    name: "Moonbirds",
+    des: "Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis fringilla pulvinar nibh diam sit.",
+  },
+  {
+    imgUrl: "images/nft/ice-bear-7.jpg",
+    name: "Clone X - X Takashi Murakami",
+    des: "Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis fringilla pulvinar nibh diam sit.",
+  },
+  {
+    imgUrl: "images/nft/ice-bear-8.jpg",
+    name: "Mutant Ape Yacht Club",
+    des: "Faucibus odio elementum nulla venenatis, libero. Ullamcorper duis fringilla pulvinar nibh diam sit.",
+  }]
+
+<div class="collections custom-container">
+  //- <div class="collections__title">
+  //-   <h2>Hottest Collections</h2>
+  //-   <p class="sub-title">Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt</p>
+  //- </div>
+  +head({class:'collections', name:'Hottest Collections', subTitle:'Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt'})
+  <div class="collections__list"> 
+    each card in collections 
+      +card({imgUrl: card.imgUrl, name: card.name, des: card.des })
+  </div>
+
+</div>

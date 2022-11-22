@@ -1,0 +1,17 @@
+extends _layouts/portfolio-layout
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Portfolio landing page";
+
+block container
+  .home-page.container
+    include ./$components/portfolio/portfolio/introduce
+    include ./$components/portfolio/portfolio/learn-all
+    include ./$components/portfolio/portfolio/what-I-do
+    include ./$components/portfolio/portfolio/portfolio
+    include ./$components/portfolio/portfolio/testimonial
+    include ./$components/portfolio/portfolio/get-in-touch
+    include ./$components/portfolio/portfolio/project
+    include ./$components/portfolio/portfolio/blog
+    
+

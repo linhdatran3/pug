@@ -1,0 +1,109 @@
+.breadcrumb {
+  $this: &;
+  font-family: $font-opensans;
+  font-size: rem(15);
+  line-height: rem(18);
+  font-weight: 500;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin-top: rem(12);
+  margin-bottom: rem(30);
+
+  @include mq($BREAKPOINT-LG) {
+    margin-top: rem(34);
+    margin-bottom: rem(56);
+  }
+
+  a {
+    text-decoration: none;
+    transition: all 0.1s ease;
+    display: block;
+    color: $color-black-1;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  li {
+    &:first-child {
+      a {
+        font-size: 0;
+        line-height: 0;
+
+        &::before {
+          content: '';
+          background-image: url('../images/icons/icon-home-black.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: rem(11);
+          height: rem(12);
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  //breadcrumb__item
+  &__item {
+    margin-left: rem(15);
+    position: relative;
+    text-transform: lowercase;
+
+    &::first-line {
+      text-transform: capitalize;
+    }
+
+    &:first-child {
+      margin-top: rem(-4);
+    }
+
+    &::before {
+      content: '';
+      width: rem(1);
+      height: rem(16);
+      display: inline-block;
+      transform: rotate(14deg);
+      position: absolute;
+      left: rem(-8);
+      top: rem(1);
+      background-color: $color-black-1;
+    }
+  }
+
+  .extend-breadcrumb & {
+    padding-top: rem(10);
+    margin: 0;
+
+    @include mq($BREAKPOINT-LG) {
+      padding-top: rem(16);
+    }
+
+    span,
+    a {
+      color: $color-white-1;
+    }
+
+    li {
+      &:first-child {
+        a {
+          &::before {
+            background-image: url('../images/icons/icon-home.svg');
+          }
+        }
+      }
+    }
+
+    &__item {
+      &::before {
+        background: $color-grey-2;
+      }
+    }
+  }
+}

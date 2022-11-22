@@ -1,0 +1,30 @@
+.contact {
+  background-image: url("../images/trip/contact-box-bg.png");
+  text-align: center;
+  padding: rem(129) rem(23.5) rem(92) rem(23.5);
+  border-radius: rem(30);
+
+  @include mq($BREAKPOINT-SM) {
+    background-image: url("../images/trip/contact-box-bg-large.png");
+    padding: rem(142) rem(181) rem(49) rem(181);
+  }
+  
+  &__title h1{
+    color: #fff;
+    margin-bottom: rem(8);
+
+  }
+
+  &__btn button {
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    border: rem(2) solid #fff;
+    margin-top: rem(18);
+
+    @include mq($BREAKPOINT-SM) {
+      width: rem(243);
+      margin-top: rem(33);
+    }
+  }
+}

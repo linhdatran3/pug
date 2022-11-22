@@ -1,0 +1,23 @@
+.card-member {
+  text-align: center;
+
+  .card-member__avatar {
+    height: rem(80);
+    width: rem(80);
+  }
+
+  .card-member__name {
+    margin: rem(12) 0;
+  }
+
+  .card-member__position {
+    font-size: rem(14);
+    line-height: rem(20);
+    font-weight: 300;
+  }
+
+  @include mq($nft-breakpoint-md, max) {
+    height: rem(180);
+    overflow: hidden;
+  }
+}

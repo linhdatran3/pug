@@ -1,0 +1,19 @@
+.provide {
+  margin-top: rem(80);
+  margin-bottom: rem(80);
+
+  .provide__content {
+    margin-top: rem(80);
+    column-count: 4;
+
+    @include mq($nft-breakpoint-md, max) {
+      margin-top: rem(64);
+      column-count: 2;
+    }
+
+    @include mq($nft-breakpoint-xs, max) {
+      margin-top: rem(48);
+      column-count: 1;
+    }
+  }
+}

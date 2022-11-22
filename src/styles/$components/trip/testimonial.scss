@@ -1,0 +1,53 @@
+.testimonial {
+  margin-top: rem(42);
+  margin-bottom: rem(55);
+
+  @include mq($BREAKPOINT-SM) {
+    margin-top: rem(126);
+    margin-bottom: rem(94);
+  }
+  .head {
+    margin-bottom: rem(16);
+    color: $trip-color-4;
+    font-weight: 600;
+  }
+}
+
+
+
+.testimonial__title {
+  margin-bottom: rem(73);
+
+  @include mq($BREAKPOINT-SM) {
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 {
+    padding-right: rem(35);
+    margin-bottom: rem(36);
+    @include mq($BREAKPOINT-SM) {
+      width: rem(509);
+    }
+  }
+
+  .sub-title {
+    margin-bottom: rem(36);
+    @include mq($BREAKPOINT-SM) {
+      width: rem(430);
+    }
+  }
+}
+
+.testimonial__content {
+  display: flex;
+  align-items: flex-end;
+  height: rem(415);
+  overflow: hidden;
+  padding-left: rem(46);
+  margin: 0 auto;
+
+  @include mq($BREAKPOINT-SM) {
+    max-width: 144rem;
+    padding: 0 13.5rem;
+  }
+}

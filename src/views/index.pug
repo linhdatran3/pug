@@ -1,0 +1,8 @@
+extends _layouts/layout
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Portfolio landing page";
+
+block container
+  p(style="margin-bottom: 120px")
+

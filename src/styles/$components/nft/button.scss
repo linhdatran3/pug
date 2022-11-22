@@ -1,0 +1,16 @@
+.btn {
+  padding: rem(16) rem(20);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: rem(20);
+  color: $nft-color-4;
+  border: none;
+  border-radius: rem(15);
+  background-color: $nft-color-1;
+
+  @include mq($nft-breakpoint-xs, max) {
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+  }
+}

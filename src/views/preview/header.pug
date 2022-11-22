@@ -1,0 +1,8 @@
+extends ../_layouts/layout-component
+
+block append vars
+  - title = 'Header'
+
+block container
+  +component('Header')
+    include ../$modules/portfolio/header

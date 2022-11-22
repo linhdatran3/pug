@@ -1,0 +1,12 @@
+.head__title {
+  text-align: center;
+  padding-top: rem(80);
+  .sub-title {
+    margin-top: rem(16);
+    padding: 0 rem(260);
+
+    @include mq($nft-breakpoint-md, max) {
+      padding: 0;
+    }
+  }
+}

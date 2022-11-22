@@ -1,0 +1,108 @@
+body {
+  background-color: $nft-color-5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: $nft-color-1;
+  font-family: $font-syne;
+}
+
+h1 {
+  font-size: rem(80);
+  line-height: rem(96);
+  text-transform: none;
+  font-weight: 700;
+
+  @include mq($nft-breakpoint-md, max) {
+    font-size: rem(72);
+    line-height: rem(88);
+  }
+
+  @include mq($nft-breakpoint-xs, max) {
+    font-size: rem(36);
+    line-height: rem(56);
+  }
+}
+
+h2 {
+  font-size: rem(48);
+  line-height: rem(64);
+  text-transform: none;
+  font-weight: 700;
+
+  @include mq($nft-breakpoint-md, max) {
+    font-size: rem(40);
+    line-height: rem(56);
+  }
+
+  @include mq($nft-breakpoint-xs, max) {
+    font-size: rem(36);
+    line-height: rem(48);
+  }
+}
+
+h3 {
+  font-size: rem(32);
+  line-height: rem(42);
+  text-transform: none;
+  font-weight: 600;
+
+  @include mq($nft-breakpoint-md, max) {
+    font-size: rem(24);
+    line-height: rem(32);
+  }
+
+  @include mq($nft-breakpoint-xs, max) {
+    font-size: rem(24);
+    line-height: rem(32);
+  }
+}
+
+h4 {
+  font-size: rem(24);
+  line-height: rem(32);
+  text-transform: none;
+  font-weight: 700;
+
+
+  @include mq($nft-breakpoint-xs, max) {
+    font-size: rem(20);
+    line-height: rem(26);
+    font-weight: 500;
+  }
+}
+
+p {
+  font-size: rem(16);
+  line-height: rem(24);
+}
+
+.custom-container {
+  padding: 0 rem(70);
+  margin: 0 auto;
+  max-width: rem(1440);
+
+  @include mq($nft-breakpoint-md, max) {
+    padding: 0 rem(32);
+  }
+
+  @include mq($nft-breakpoint-xs, max) {
+    padding: 0 rem(16);
+  }
+  
+}
+
+ul {
+  li {
+    list-style: none;
+    margin: 0;
+  }
+}
+

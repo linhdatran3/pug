@@ -1,0 +1,37 @@
+//- extends ../../_layouts/trip-layout
+
+<header class="header">
+  <div class="header__wrapper custom-container">
+    <div class="header__wrapper__logo">
+      <h1>Travelulu</h1>
+    </div>
+    <div class="header__wrapper__menu">
+      <img src="images/trip/Menu.svg" alt="menu" height="28" width="18" />
+    </div>
+  </div>
+  <div class="header__banner">
+    <div class="header__banner__image">
+      <img src="images/trip/Boarding.png" alt="Boarding" />
+    </div>
+    <div class="header__banner__content">
+      <div class="header__banner__content__title">
+        <h1>Plan your next big trip overseas.</h1>
+      </div>
+      <div class="header__banner__content__button">
+        +button({text:'Begin plans', type:"btn-primary"})
+        +button({text:'Review plans', type:"btn-outline"})
+      </div>
+    </div>
+  </div>
+  <div class="header__hero-list">
+    <div class="header__hero-list__item--1 item">
+      +heroItem({imgUrl:'images/trip/AirplaneTilt.svg', number:'23,793', content:'Travel to over 23 thousand locations around the world.'})
+    </div>
+    <div class="header__hero-list__item--2 item">
+      +heroItem({imgUrl:'images/trip/globeHemisphereEast.svg', number:'82,000', content:'Read tens of thousands of reviews of destinations.'})
+    </div>
+    <div class="header__hero-list__item--3 item">
+      +heroItem({imgUrl:'images/trip/Bicycle.svg', number:'4,000,000', content:'Visited by millions of travellers every single day.'})
+    </div>
+  </div>
+</header>

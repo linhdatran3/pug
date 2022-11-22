@@ -1,0 +1,11 @@
+extends _layouts/nft-layout
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "NFT";
+block container
+  include $components/nft/nft/collections
+  include $components/nft/nft/team
+  include $components/nft/nft/provide
+  include $components/nft/nft/testimonials
+  include $components/nft/nft/question
+

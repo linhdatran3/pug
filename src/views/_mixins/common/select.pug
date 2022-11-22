@@ -1,0 +1,11 @@
+mixin select(list = [])
+  each item in list
+    .custom-select-list&attributes(attributes)(data-type-filter=item.id)
+      //- label.custom-select-list__title=item.label
+      label= item.label
+      select&attributes(attributes)(data-select)
+        each option in item.options
+          if option.value
+            option(value=option.value)= option.text
+          else
+            option= option

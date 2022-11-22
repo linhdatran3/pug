@@ -1,0 +1,12 @@
+@import "_utils/index";
+
+// components
+@import "$components/portfolio/common";
+@import "$components/portfolio/header";
+@import "$components/portfolio/footer";
+@import "$components/portfolio/home";
+
+@import "$components/portfolio/listSocialMedia.scss";
+@import "$components/portfolio/slider.scss";
+@import "$components/portfolio/cardContent.scss";
+@import "$components/portfolio/cardImage.scss";

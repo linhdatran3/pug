@@ -1,0 +1,38 @@
+-
+  const listAskedQuestions = [{
+    question: "What kind of websites I can build with Zeus UI?",
+    ask : "",
+  },
+  {
+    question: "What makes Zeus UI literally the best Web UI kit in the Internet?",
+    ask : "",
+  },
+  {
+    question: "How much does Zeus UI cost?",
+    ask : "This FAQ section is now in the expanded state, so you see how it looks. Rhoncus sed facilisi sed amet. Tristique commodo sodales.",
+  },
+  {
+    question: "How long will you support Zeus UI?",
+    ask : "",
+  },
+  {
+    question: "Can I resell Zeus UI?",
+    ask : "",
+  },
+  {
+    question: "Could you make me a website using Zeus UI?",
+    ask : "",
+  },
+  {
+    question: "Is that easy to design a website with Zeus UI?",
+    ask : "",
+  },];
+<div class="question">
+  <div class="question__title">
+    +head({class:'question',name: 'Frequently Asked Questions', subTitle:'Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt. '})
+  </div>
+  <div class="question__content">
+    each item in listAskedQuestions
+      +cardQuestion({question: item.question, ask: item.ask})
+  </div>
+</div>

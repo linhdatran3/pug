@@ -1,0 +1,52 @@
+.footer {
+  text-align: center;
+  padding-top: rem(55);
+
+  @include mq($BREAKPOINT-SM) {
+    display: flex;
+    justify-content: space-around;
+    text-align: inherit;
+    margin-top: rem(89);
+  }
+
+  ul {
+    padding: 0 rem(60);
+    margin-top: rem(71);
+
+    @include mq($BREAKPOINT-SM) {
+      margin-top: 0;
+    }
+
+    li {
+      font-size: rem(16);
+      line-height: rem(28);
+      letter-spacing: rem(0.75);
+      color: $trip-color-2;
+      margin-bottom: rem(18);
+  
+      &:nth-child(1) {
+        font-weight: 600;
+        margin-bottom: rem(23);
+      }
+    }
+  }
+
+  &__travelulu {
+
+    &__title {
+      font-weight: 700;
+      font-size: rem(34.38);
+      line-height: rem(55);
+      color: $trip-color-1;
+      margin-bottom: rem(24);
+    }
+
+    &__copy-right{
+      margin-top: rem(40);
+    }
+  }
+
+  .footer__contact__email {
+    color: $trip-color-1;
+  }
+}

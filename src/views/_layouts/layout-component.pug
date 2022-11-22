@@ -1,0 +1,140 @@
+extends layout
+
+block append vars
+  - useHeader = false;
+  - useFooter = false;
+  - pageLevel = 1;
+
+block styles
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/vs2015.min.css")
+
+  style.
+    .component-container {
+      max-width: 1600px;
+      padding: 0 4rem;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 992px) {
+      .component-container {
+        padding: 0 4rem;
+      }
+    }
+
+    .component-dev {
+      counter-reset: count;
+      padding: 1rem;
+      margin-bottom: 5rem;
+    }
+
+    .component-dev > .title,
+    .component-dev > .block > .sub-title {
+      line-height: 1.1;
+      letter-spacing: 0;
+      font-weight: bold;
+    }
+
+    .component-dev > .title {
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-left: 10px solid currentColor;
+      padding-left: 10px;
+    }
+
+    .component-dev > .block {
+      margin-top: 20px;
+    }
+
+    .component-dev > .block > .sub-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .component-dev .section.\--custom-height {
+      height: 35vh;
+    }
+
+    .component-dev > .block > .sub-title:before {
+      counter-increment: count;
+      content: counter(count) ". ";
+    }
+
+    .component-dev > .block > .code-frame {
+      position: relative;
+      font-family: Consolas, monospace;
+      font-size: 16px;
+      z-index: 1;
+      overflow: auto;
+    }
+
+    .component-dev > .block > .code-frame > textarea {
+      width: 100%;
+      height: 300px;
+    }
+
+    .component-dev > .block > .code-frame > code {
+      padding: 20px;
+    }
+
+    .component-dev > .block > .block-demo {
+      border: 1px dashed rgba(255, 0, 0, 0.3);
+    }
+
+    .component.complete > .block > .block-demo {
+      border-color: rgba(5, 70, 22, 0.3);
+    }
+
+    .component-dev .color-block {
+      width: 100%;
+      height: 150px;
+      border: 3px solid #c3c3c3;
+    }
+
+    .component-dev .demo-ico em[class^="ico"],
+    .component-dev .demo-ico em.fa {
+      color: #c9ba9e;
+      font-size: 20px;
+    }
+
+block append scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.5/beautify-html.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/languages/htmlbars.min.js")
+  script.
+    document.querySelectorAll(".code-frame textarea").forEach(function (element) {
+      var pre = document.createElement("pre");
+      var code = document.createElement("code");
+      var preCode = element.value.trim().replace(/"\{/g, "'{").replace(/"\[/g, "'[").replace(/\}"/g, "}'").replace(/\]"/g, "]'");
+
+      var html = html_beautify(preCode, {
+        indent_size: 4,
+        indent_char: " ",
+        break_chained_methods: true,
+      });
+
+      code.innerText = html;
+
+      code.classList.add("html");
+      pre.appendChild(code);
+      element.insertAdjacentElement("afterend", pre);
+      element.parentElement.removeChild(element);
+    });
+
+    hljs.highlightAll();
+
+block mixin
+  mixin component(title)
+    .component-container
+      .component-dev&attributes(attributes)
+        h1.h1.title!= title
+
+        .block
+          h2.sub-title Demo
+          .block-demo
+            block
+
+        .block
+          h2.sub-title Code Frame
+          .code-frame
+            textarea
+              block

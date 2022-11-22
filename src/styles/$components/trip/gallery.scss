@@ -1,0 +1,37 @@
+.gallery {
+  margin-top: rem(53);
+
+  @include mq($BREAKPOINT-SM) {
+    margin-top: rem(74);
+  }
+  .head {
+    margin-bottom: rem(16);
+    color: $trip-color-4;
+    font-weight: 600;
+  }
+}
+
+
+
+.gallery__title {
+  margin-bottom: rem(73);
+
+  @include mq($BREAKPOINT-SM) {
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 {
+    padding-right: rem(35);
+    margin-bottom: rem(36);
+    @include mq($BREAKPOINT-SM) {
+      width: rem(509);
+    }
+  }
+
+  .sub-title {
+    margin-bottom: rem(36);
+    @include mq($BREAKPOINT-SM) {
+      width: rem(430);
+    }
+  }
+}

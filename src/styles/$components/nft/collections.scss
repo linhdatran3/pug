@@ -1,0 +1,44 @@
+.collections__title {
+  text-align: center;
+  margin-top: rem(80);
+  margin-bottom: rem(64);
+  
+  .sub-title {
+    margin-top: rem(16);
+    padding: 0 rem(260);
+
+    @include mq($nft-breakpoint-md, max) {
+      padding: 0;
+    }
+  }
+}
+
+.collections__list__row {
+  display: flex;
+  padding-bottom: rem(64);
+
+  @include mq($nft-breakpoint-md, max) {
+    padding-bottom: rem(48);
+  }
+  @include mq($nft-breakpoint-xs, max) {
+    padding-bottom: rem(40);
+    display: block;
+  }
+}
+
+.collections__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(32);
+
+  @include mq($nft-breakpoint-md, max) {
+    grid-template-columns: inherit;
+  }
+  // @include mq($nft-breakpoint-md, max) {
+  //   flex-wrap: wrap;
+  // }
+  @include mq($nft-breakpoint-xs, max) {
+    grid-template-columns: inherit;
+  }
+
+}

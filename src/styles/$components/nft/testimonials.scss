@@ -1,0 +1,26 @@
+.testimonials {
+  text-align: center;
+  margin-top: rem(80);
+  margin-bottom: rem(80);
+
+  .testimonials__title {
+    margin-bottom: rem(64);
+  }
+
+  .testimonials__twitter {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: rem(24);
+    background: linear-gradient(180deg, rgba(252, 250, 255, 0) 0%, #FCFAFF 88.54%);
+
+    @include mq($nft-breakpoint-md, max) {
+      grid-template-columns: repeat(3, rem(200));
+      overflow: hidden;
+      max-height: rem(720);
+    }
+    @include mq($nft-breakpoint-xs, max) {
+      max-height: rem(470);
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+-
+  const listMembers = [{
+    imgUrl:'images/nft/member-1.png',
+    name:'Guy Hawkins',
+    position:'CEO',
+  },
+  {
+    imgUrl:'images/nft/member-2.png',
+    name:'Jane Cooper',
+    position:'COO',
+  },
+  {
+    imgUrl:'images/nft/member-3.png',
+    name:'Darrell Steward',
+    position:'CTO',
+  },
+  {
+    imgUrl:'images/nft/member-4.png',
+    name:'Dianne Russell',
+    position:'CDO',
+  }];
+<div class="team custom-container">
+  +head({class:'team',name: 'Our Team', subTitle:'Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt. '})
+  <div class="team__content">
+    each member in listMembers 
+      +cardMember({imgUrl: member.imgUrl, name: member.name, position: member.position})
+  </div>
+</div>

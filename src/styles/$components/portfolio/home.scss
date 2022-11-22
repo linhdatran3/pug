@@ -1,0 +1,630 @@
+h2 {
+  font-weight: 500;
+}
+.introduce {
+  padding-top: 3.8rem;
+  padding-bottom: 10rem;
+
+  &__content {
+    font-size: 1.8rem;
+    margin-bottom: 5.5rem;
+
+    p {
+      margin-bottom: 2rem;
+      line-height: 2.1rem;
+
+      @media screen and (min-width: 768px) {
+        font-size: 4rem;
+        line-height: 4.74rem;
+      }
+
+      &:nth-child(2) {
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+        
+        span {
+          &:nth-child(2) {
+            font-weight: 500;
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          font-size: 7.4rem;
+          line-height: 8.769rem;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0rem;
+
+        @media screen and (min-width: 768px) {
+          font-size: 2.4rem;
+          line-height: 2.844rem;
+        }
+      }
+
+    }
+
+    .hello {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 2.8rem;
+      position: relative;
+      padding-left: 6rem;
+
+      &::before {
+        content: '';
+        width: 4.8rem;
+        height: 0.2rem;
+        background-color: #333333;
+        position: absolute;
+        left: 0;
+        bottom: 1.4rem;
+
+        @media screen and (min-width: 768px) {
+          bottom: 1.7rem;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: 3.4rem;
+        line-height: 3.907rem;
+      }
+    }
+
+    .name {
+      span {
+        &:nth-child(1) {
+          font-weight: 500 !important;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 5.6rem;
+    }
+    @media screen and (min-width: 1152px) {
+      width: 59.8rem;
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__image {
+    margin-bottom: 6rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 10rem;
+    }
+    @media screen and (min-width: 1152px) {
+      margin-left: 3.2rem;
+    }
+  }
+
+  .offset-xs-2 {
+    @media screen and (min-width: 1152px) {
+      display: inline-block;
+    }
+  }
+  .contact {
+    @media screen and (min-width: 1152px) {
+      padding-top: 0;
+      padding-bottom: 10.6rem;  
+      justify-self: start;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1151px) {
+    padding-top: 0;
+    padding-bottom: 10.6rem;  
+  }
+  @media screen and (min-width: 1152px) {
+    padding-top: 0;
+    padding-bottom: 10.6rem;  
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.learn-all {
+  padding-bottom: 8rem;
+  padding-top: 7.6rem;
+
+  &__title {
+    font-size: 3.2rem;
+    margin-bottom: 6rem;
+    line-height: 3.8rem;
+
+    h2 {
+      font-weight: 400;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 3.6rem;
+      line-height: 4.266rem;
+      text-align: center;
+    }
+  }
+
+  &__video {
+
+    iframe {
+      @media screen and (min-width: 768px) {
+        height: 71.5rem;
+      }
+    }
+
+  }
+
+  @media (min-width: 768px) and (max-width: 1151px) {
+    padding-top: 9rem;
+    padding-bottom: 10rem;
+  }
+  @media screen and (min-width: 1152px) {
+    padding-top: 6.6rem;
+    padding-bottom: 14rem;
+  }
+}
+
+.what-I-do {
+  padding: 8rem 0;
+
+  &__title {
+    margin-bottom: 6rem;
+    text-align: center;
+    font-size: 4rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 5.4rem;
+      line-height: 6.4rem;
+    }
+  }
+
+  &__content {
+    margin-bottom: 6rem;
+    .col-block {
+      margin-bottom: 3.2rem;
+      @media screen and (min-width: 1152px) {
+        display: inline-block;
+        margin-right: 3.1rem;
+        margin-bottom: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 6rem;
+    }
+    
+  }
+
+  @media (min-width: 768px) and (max-width: 1151px) {
+    padding: 10rem 0;
+  }
+  @media screen and (min-width: 1152px) {
+    padding: 14rem 0;
+  }
+}
+
+.portfolio {
+  padding: 8rem 0;
+  padding-top: 7.6rem;
+
+  &__title {
+    font-size: 4rem;
+    text-align: center;
+    line-height: 4.7rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 5.4rem;
+      line-height: 6.4rem;
+    }
+  }
+
+  &__menu {
+    margin: 6rem 0;
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom:2.4rem;
+        line-height: 1.7rem;
+
+        a {
+          text-decoration: none;
+          color: #333333;
+
+          &::before {
+            content: '-';
+            padding-right: 0.8rem;
+            margin-right: 1.2rem;
+          }
+
+          @media screen and (min-width: 768px) {
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+          }
+        }
+
+        .selected {
+          font-weight: 600;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+          display: inline-block;
+          margin-right: 2.4rem;
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        text-align: center;
+        margin-bottom: 6rem;
+      }
+    }
+  }
+
+  &__list-images {
+    margin-bottom: 6rem;
+
+
+    .item-image {
+      margin-bottom: 3.2rem;
+
+      img {
+        @media (min-width: 768px) and (max-width: 1151px) {
+          height: 52rem;
+        }
+
+        @media screen and (min-width: 1152px) {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1151px) {
+        &:nth-of-type(even){
+          margin-bottom: 4.2rem;
+        }
+      }
+
+      @media screen and (min-width: 1152px) {
+        margin-bottom: 0;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1151px) {
+      margin-bottom: 6.6rem;
+    }
+    @media screen and (min-width: 1152px) {
+      margin-bottom: 6rem;
+      display: grid;
+      grid-template-columns: repeat(3, calc(34.1rem));
+      grid-template-rows: repeat(1082, 0.1rem);
+      column-gap: 3.2rem;
+
+      #item-1 {
+        grid-column: 1/2;
+        grid-row: 1/526;
+      }
+
+      #item-2 {
+        grid-row: 559/1083;
+        grid-column: 1/2;
+      }
+
+      #item-3 {
+        grid-row: 1/638;
+        grid-column: 2/3;
+      }
+
+      #item-4 {
+        grid-row: 671/1083;
+        grid-column: 2/3;
+      }
+
+      #item-5 {
+        grid-row: 1/420;
+        grid-column: 3/4;
+      }
+
+      #item-6 {
+        grid-row: 452/1083;
+        grid-column: 3/4;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1151px) {
+    padding: 10rem 0;
+    padding-top: 9.6rem;
+  }
+  @media screen and (min-width: 1152px) {
+    padding: 13.2rem 0;
+    padding-top: 13.6rem;
+  }
+}
+
+.testimonial {
+  padding: 7.6rem 0;
+
+  &__title {
+    font-size: 4rem;
+    margin-bottom: 10rem;
+    line-height: 4.7rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 5.4rem;
+      line-height: 6.399rem;
+      text-align: center;
+    }
+  }
+
+  &__content {
+
+    &__image {
+      @media (min-width: 768px) and (max-width: 1151px) {
+        display: flex;
+        height: 43.4rem;
+        justify-content: center;
+      }
+      @media screen and (min-width: 1152px) {
+        img {
+          height: 58.9rem;
+        }
+      }
+    }
+    &__description {
+      margin-top: 6rem;
+      .quote {
+        margin-bottom: 4rem;
+        line-height: 2.1rem;
+        font-size: 1.8rem;
+        height: 22.1rem;
+
+        .quote-open {
+          padding: 0.4rem;
+        }
+        .quote-close {
+          float: right;
+          padding: 0.2rem 0;
+        }
+
+        @media screen and (min-width: 768px) {
+          font-size: 3.2rem;
+          line-height: 3.792rem;
+          margin-bottom: 8rem;
+          img {
+            height: 8.9rem;
+          }
+        }
+      }
+
+      .client-name {
+        margin-bottom: 4rem;
+        line-height: 3.3rem;
+        p {
+          &:nth-child(1) {
+            font-size: 2.8rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+          }
+          &:nth-child(2) {
+            font-size: 2rem;
+            line-height: 2.4rem;
+          }
+        }
+
+        @media (min-width: 768px) and (max-width: 1151px) {
+          padding-top: 2.2rem;
+        }
+        @media screen and (min-width: 1152px) {
+          padding: 0;
+          margin-top: 19rem;
+          margin-bottom: 9rem;
+        }
+        
+      }
+
+      @media screen and (min-width: 1152px) {
+        margin-top: 0;
+        grid-column: 3/4;
+      }
+    }
+
+    @media screen and (min-width: 1152px) {
+      display: grid;
+      grid-template-columns: 48.6rem 6rem 54.2rem;
+      height: 58.9rem;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1151px) {
+    padding-bottom: 9.6rem;
+    padding-top: 10rem;
+  }
+  @media screen and (min-width: 1152px) {
+    padding: 14rem 0;
+  }
+}
+
+.get-in-touch {
+  background-color: #363434;
+  color: #fff;
+  text-align: center;
+  padding: 8rem 0;
+  padding-bottom: 7.7rem;
+
+  &__title {
+    h2 {
+      &:nth-child(1) {
+        font-size: 3.2rem;
+        margin-bottom: 2.4rem;
+      }
+  
+      &:nth-child(2) {
+        font-size: 4rem;
+
+        @media screen and (min-width: 768px) {
+          font-size: 5.4rem;
+        }
+      }
+    }
+    
+  }
+
+  &__button {
+    margin: 8rem 0;
+
+    button {
+      padding: 2rem 4rem;
+      font-size: 2.8rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__contact {
+    border: 1px solid white;
+    @media screen and (min-width: 768px) {
+      height: 3.1rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 10rem 0;
+  }
+}
+
+.project {
+  padding: 8rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+
+  .col-block {
+    margin-bottom: 4rem;
+
+    p {
+      &:nth-child(1) {
+        font-size: 4rem;
+        margin-bottom: 1.2rem;
+        line-height: 4.7rem;
+
+        @media screen and (min-width: 1152px) {
+          font-size: 6.4rem;
+          line-height: 7.584rem;
+        }
+      }
+
+      @media screen and (min-width: 1152px) {
+        font-size: 2.4rem;
+        line-height: 2.844rem;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }   
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      width: 18.2rem;
+    }
+    @media screen and (min-width: 1152px) {
+      width: 27.2rem;
+    }
+  }
+  
+
+  @media (min-width: 768px) and (max-width: 1151px) {
+    padding: 10rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1152px) {
+    padding: 20rem 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.blog {
+  padding: 8rem 0;
+
+  &__title {
+    margin-bottom: 6rem;
+    text-align: center;
+    line-height: 4.7rem;
+    font-size: 4rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 5.4rem;
+      line-height: 6.396rem;
+    }
+  }  
+
+  &__content {
+    .blog__content-item {
+      margin-bottom: 3.2rem;
+
+      &:last-child {
+        margin-bottom: 6rem;
+        margin-right: 0;
+      }
+
+      .blog__content-item__image {
+        
+
+        img {
+          @media (min-width: 768px) and (max-width: 1151px) {
+            width: 100%;
+            position: absolute;
+            bottom: -20%;
+            transform: translateY(40%);
+          }
+          @media screen and (min-width:1152px) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        @media (min-width: 768px) and (max-width:1152px) {
+          height: 33.7rem;
+          overflow: hidden;
+          position: relative;
+        }
+
+        @media screen and (min-width:1152px) {
+          height: 33.7rem;
+          width: 34rem;
+        }
+      }
+
+      @media screen and (min-width: 1152px) {
+        width: 34rem;
+        margin-right: 3.2rem;
+      }
+    }
+
+    @media screen and (min-width: 1152px) {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1151px) {
+    padding: 10rem 0;
+  }
+  @media screen and (min-width: 1152px) {
+    padding: 14rem 0;
+    padding-top: 13.83rem;
+  }
+}

@@ -1,0 +1,46 @@
+.card-content {
+  font-weight: 400;
+  font-size: 1.8rem;
+  background-color:#D6D6D6;
+  padding: 6.7rem 2rem 6.75rem 2rem;
+
+  &__title {
+    p {
+      line-height: 2.1rem;
+
+      &:nth-child(1) {
+        font-size: 4.6rem;
+        line-height: 5.5rem;
+        padding-bottom: 2rem;
+      }
+    }
+    
+  }
+
+  &__read-more {
+    font-weight: 600;
+    margin-top: 5.1rem;
+    line-height: 2.1rem;
+    font-size: 1.8rem;
+    div {
+      display: inline-block;
+    }
+
+    .arrow-right::before {
+      content: '\2192';
+      cursor: pointer;
+      margin-left: 2.4rem;
+      font-size: 4.4rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 11.6rem 4rem;
+  }
+  @media screen and (min-width: 1152px) {
+    padding: 3.3rem 4rem;
+    height: 40.9rem;
+    width: 33rem;
+  }
+
+}

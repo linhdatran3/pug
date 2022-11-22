@@ -1,0 +1,4 @@
+mixin tags(tags)
+  .tags&attributes(attributes)
+    each tag in tags
+      span.tags__item(class=tag.color)!= tag.name

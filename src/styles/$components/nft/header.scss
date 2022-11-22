@@ -1,0 +1,89 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem(18);
+  padding-bottom: rem(18);
+  border-bottom: 1px solid $nft-color-3;
+  @include mq($nft-breakpoint-xs, max) {
+    padding-top: rem(16) 0;
+  }
+}
+.banner {
+  background-image: url("../images/nft/banner-desktop.png");
+  text-align: center;
+  padding-top: rem(117);
+  padding-bottom: rem(101);
+  z-index: 2;
+  
+  @include mq($nft-breakpoint-md, max) {
+    background-image: url("../images/nft/banner-tablet.png");
+    height: 100%;
+  }
+  @include mq($nft-breakpoint-xs, max) {
+    background-image: url("../images/nft/banner-mobile.png");
+    height: 100%;
+  }
+
+  // &__title {
+  //   margin: 0 rem(222) rem(32) rem(222);
+
+  //   @include mq($nft-breakpoint-md, max) {
+  //     margin: 0 rem(0) rem(32) rem(0);
+
+  //   }
+  //   @include mq($nft-breakpoint-xs, max) {
+  //     margin: 0 rem(20) rem(16) rem(20);
+  //     padding-top: rem(48);
+
+  //   }
+  // }
+
+  &__sub-title {
+    margin: 0 rem(270);
+    margin-bottom: rem(32);
+
+    @include mq($nft-breakpoint-md, max) {
+      margin: 0 rem(72);
+      margin-bottom: rem(32);
+    }
+    @include mq($nft-breakpoint-xs, max) {
+      margin: 0;
+      margin-bottom: rem(24);
+    }
+  }
+}
+
+.list-logo {
+  display: flex;
+  justify-content: center;
+  padding: rem(40) 0;
+  z-index: -1;
+
+  @include mq($nft-breakpoint-md, max) {
+    flex-wrap: wrap;
+  }
+  @include mq($nft-breakpoint-xs, max) {
+  }
+
+  .list-logo__line-1, .list-logo__line-2 {
+    display: flex;
+  }
+
+  img {
+    padding-right: rem(40);
+    @include mq($nft-breakpoint-md, max) {
+      padding-right: rem(24);
+      height: rem(36);
+    }
+    @include mq($nft-breakpoint-xs, max) {
+      padding-right: rem(16);
+      height: rem(24);
+    }
+
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

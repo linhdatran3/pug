@@ -1,0 +1,33 @@
+mixin mega-menu-title(item = {})
+  .mega-menu.mega-menu-title
+    .row
+      each block in item.blocks
+        .col-12.col-lg-4.main-col
+          p.mega-menu__title!= block.title
+          .row.justify-content-start
+            ul.mega-menu__list
+              each col in block.cols
+                each link in col.menu
+                  li.mega-menu__item
+                    +link(link.linkUrl, link.linkTitle).mega-menu__link
+                      +img(link.imagePath, link.imageAlt).mega-menu__img
+                      span!= link.linkTitle
+          if block.viewAll
+            +link(block.viewAll.linkUrl, block.viewAll.linkTitle).mega-menu__view-all
+
+mixin mega-menu-special(item = {})
+  .mega-menu.mega-menu-title.mega-menu-special
+    .row
+      each block in item.blocks
+        .col-12.col-lg-3.main-col(class!=block.class)
+          p.mega-menu__title!= block.title
+          .row.justify-content-start
+            ul.mega-menu__list
+              each col in block.cols
+                each link in col.menu
+                  li.mega-menu__item
+                    +link(link.linkUrl, link.linkTitle).mega-menu__link
+                      +img(link.imagePath, link.imageAlt).mega-menu__img
+                      span!= link.linkTitle
+          if block.viewAll
+            +link(block.viewAll.linkUrl, block.viewAll.linkTitle).mega-menu__view-all

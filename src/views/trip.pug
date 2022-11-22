@@ -1,0 +1,10 @@
+extends _layouts/trip-layout
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Trip";
+block container
+  include ./$components/trip/trip/todo
+  include ./$components/trip/trip/gallery
+  include ./$components/trip/trip/planning
+  include ./$components/trip/trip/testimonial
+  include ./$components/trip/trip/contact

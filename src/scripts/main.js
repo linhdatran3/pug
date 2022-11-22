@@ -1,0 +1,45 @@
+import '@/initializations/update-js-assets-path';
+import '@/initializations/browser-detect';
+import '@/initializations/import-jquery-plugins';
+import '@/initializations/improve-window-events';
+
+// libs
+import '@/_libs/jquery-ui.min';
+import '@/_libs/jquery.ui.touch-punch.min';
+// Plugins
+// import '@/plugins/global';
+// import '@/plugins/template-plugin';
+// import '@/plugins/height-content';
+// import '@/plugins/card-list-slider';
+// import '@/plugins/gallery-slider';
+// import '@/plugins/gallery-detail';
+// import '@/plugins/modal';
+import '@/plugins/menu';
+// import '@/plugins/main-slider';
+// import '@/plugins/notify';
+// import '@/plugins/newsletter';
+// import '@/plugins/calendar/calendar-filter';
+// import '@/plugins/calendar/calendar-detail';
+// import '@/plugins/calendar/calendar-slide';
+// import '@/plugins/events-detail';
+// import '@/plugins/events-tab';
+// import '@/plugins/select';
+// import '@/plugins/event-filter';
+// import '@/plugins/height-svg';
+// import '@/plugins/collapse';
+// import '@/plugins/search-form';
+// import '@/plugins/toggle-modal';
+// import '@/plugins/show-more';
+// import '@/plugins/filter-tab';
+// import '@/plugins/price-range';
+// import '@/plugins/scroll-top';
+// import '@/plugins/scroll-policy';
+// import '@/plugins/form-submitted-msg';
+// import '@/plugins/nav-tabs';
+// import '@/plugins/select-tabs';
+// import '@/plugins/navbar';
+// import '@/plugins/htp-gallery-main';
+// import '@/plugins/social-collapse';
+// import '@/plugins/list-video-htp';
+// import '@/plugins/pricing-tab';
+// import '@/plugins/equal-height';

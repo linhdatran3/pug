@@ -1,0 +1,82 @@
+include ../_mixins/all
+include ../$components/nft/common/button
+include ../$components/nft/common/card
+include ../$components/nft/common/head
+include ../$components/nft/common/card-member
+include ../$components/nft/common/card-question
+include ../$components/nft/common/card-twitter
+ 
+block vars
+  - let useHeader = true;
+  - let useFooter = true;
+  - let title = "Layout";
+  - let namespace = "";
+  - let menuIndex = 0;
+  - let pageLevel = 0;
+
+- const rootAssetsPath = $localeName ? "../" : "";
+- const _levelPath = [...Array(pageLevel)].map(() => "..").join("/");
+- const _trailDash = pageLevel ? "/" : "";
+- const levelPath = _levelPath + _trailDash;
+//- - const assetsPath = rootAssetsPath + levelPath
+- const isRTL = $translator.isRTL;
+- const dir = isRTL ? "rtl" : "ltr";
+- const rtlSuffix = isRTL ? "-rtl" : "";
+-
+  const viewports = [
+    'width=device-width',
+    'initial-scale=1',
+    'shrink-to-fit=no'
+  ].join(',')
+
+block path
+  - let assetsPath = rootAssetsPath + levelPath;
+
+-
+  const translateAssetPath = (path, useLevel) => {
+    const isExternalPath = /^(https?:)?\/\//.test(path)
+
+    return isExternalPath
+      ? path
+      : (useLevel ? levelPath : assetsPath) + (path.replace ? path.replace(/^\//, '') : '')
+  }
+
+block mixin
+
+doctype html
+html(lang=$localeName, dir=dir)
+  head
+    title= title
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(charset="utf-8")
+    meta(name="viewport", content!=viewports)
+    link(
+      rel="stylesheet",
+      media="all",
+      href="https://cdn.jsdelivr.net/gh/NigelOToole/progress-tracker@v2.0.6/docs/styles/progress-tracker.css"
+    )
+
+    include ../_blocks/meta
+    include ../_blocks/favicon
+    include ../_blocks/nft
+
+    block styles
+    block scripts
+      script.
+        var data_filter = '{"price_config":{"min":"0","max":"10000"},"price_filter":[],"date_filter":null}';
+
+  body(class=namespace)
+    if useHeader
+      include ../$modules/nft/header
+
+    main(role="main")
+      block container
+
+    if useFooter
+      include ../$modules/nft/footer
+
+    block scripts
+      script.
+        var staticJsAssetsPath = "#{assetsPath}js/";
+
+    include ../_blocks/scripts

@@ -1,0 +1,8 @@
+mixin video(sources)
+  if sources.src
+    - const errMsg = "Your browser does not support the video tag.";
+    video&attributes(attributes)
+      source.slide__video-src(src=translateAssetPath(sources.src), type=sources.type)
+      p!= errMsg
+  if sources.isPlayIcon
+    .slide__video-play

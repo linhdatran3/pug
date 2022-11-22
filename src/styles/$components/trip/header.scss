@@ -1,0 +1,132 @@
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem(34);
+  padding-bottom: rem(43);
+
+  @include mq($BREAKPOINT-SM) {
+    padding-bottom: 0;
+  }
+
+  h1 {
+    display: inline;
+    font-size: rem(34.38);
+    line-height: rem(55);
+    color: $trip-color-1;
+  }
+  .header__wrapper__menu {
+    padding-top: rem(13);
+    padding-right: rem(37);
+  }
+}
+
+.header__banner {
+  overflow: hidden;
+  padding: 0 rem(30);
+  &__image {
+    @include mq($BREAKPOINT-SM) {
+      position: absolute;
+      right: rem(-135);
+    }
+
+    img {
+      @include mq($BREAKPOINT-SM) {
+        width: rem(1090);
+        height: rem(625);
+        object-fit: contain;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__content {
+    @include mq($BREAKPOINT-SM) {
+      position: absolute;
+      width: rem(669);
+      padding: 0;
+      z-index: -1;
+    }
+  }
+
+  &__content__title {
+    padding: 0 rem(11) rem(21) rem(21);
+    color: $trip-color-2;
+    @include mq($BREAKPOINT-SM) {
+      padding-top: rem(182);
+      margin-bottom: rem(25);
+    }
+  }
+
+  &__content__button{
+    
+    button {
+      width: 100%;
+      @include mq($BREAKPOINT-SM) {
+        width: rem(243);
+        height: rem(64);
+      }
+
+      &:nth-child(1) {
+        margin-bottom: rem(26);
+        @include mq($BREAKPOINT-SM) {
+          margin-right: rem(25);
+        }
+      }
+    }
+    
+    @include mq($BREAKPOINT-SM) {
+      display: flex;
+      margin-right: rem(56);
+    }
+  }
+
+  @include mq($BREAKPOINT-SM) {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    height: rem(625);
+    padding-left: rem(135);
+    padding-right: 0;
+  }
+}
+
+.header__hero-list {
+  margin-top: rem(87);
+
+  @include mq($BREAKPOINT-SM) {
+    position: relative;
+    height: rem(200);
+  }
+
+  .item {
+    border: rem(1) solid $trip-color-3;
+    padding-left: rem(51);
+
+    @include mq($BREAKPOINT-SM) {
+      position: absolute;
+      width: calc(100%/3);
+      padding-top: 0;
+      
+    }
+  }
+  &__item--1 {
+    @include mq($BREAKPOINT-SM) {
+      left: 0;
+      padding-left: rem(135) !important;
+    }
+    
+  }
+  &__item--2 {
+    @include mq($BREAKPOINT-SM) {
+      left: calc(100%/3);
+      padding-left: rem(65);
+    }
+  }
+
+  &__item--3 {
+    @include mq($BREAKPOINT-SM) {
+      right: 0;
+      padding-left: rem(65);
+    }
+  }
+}

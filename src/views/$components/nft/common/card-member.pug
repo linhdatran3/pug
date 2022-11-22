@@ -1,0 +1,7 @@
+mixin cardMember(item)
+  <div class="card-member">
+    <img class="card-member__avatar" src="!{item.imgUrl}" style="height: !{item.height}; width:!{item.width}" alt="!{item.name}"/>
+    <h4 class="card-member__name">!{item.name}</h4>
+    <p class="card-member__position">!{item.position}</p>
+  </div>
++cardMember({height:"80px", width: "80px"})

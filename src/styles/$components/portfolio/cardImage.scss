@@ -1,0 +1,50 @@
+.card-image {
+  color: white;
+
+  &__image {
+    z-index: 2;
+  }
+
+  &__content {
+    padding: 2rem;
+    background-color: #333333;
+  }
+  
+  .card-image__reach {
+    display: flex;
+    width: 100%;
+    padding-bottom: 6rem;
+
+    div {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      &:nth-child(2) {
+        padding: 0 1.7rem;
+      }
+    }
+  }
+
+  .card-image__title {
+    font-size: 2rem;
+    padding-bottom: 6rem;
+    line-height: 2.4rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.4rem;
+      line-height: 2.844rem;
+    }
+  }
+
+  .card-image__read-more {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    
+    .arrow-right::before {
+      content: '\2192';
+      cursor: pointer;
+      padding-left: 2.4rem;
+    }
+  }
+  
+}

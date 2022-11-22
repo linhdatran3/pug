@@ -1,0 +1,88 @@
+*,*::before,*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size-rem;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-poppins;
+  font-weight: 400;
+  font-size: rem(16);
+
+  // @include mq($BREAKPOINT-LG) {
+  //   font-size: rem(20);
+  // }
+
+  &.\--freeze {
+    height: 100%;
+    overflow: hidden !important;
+
+    html.ios & {
+      position: fixed;
+      width: 100%;
+    }
+  }
+}
+
+.\--add-fixed-border {
+  html[class*="--scroll-"] & {
+    border-right: 0 solid $color-white-1;
+    border-right-style: solid;
+    border-right-color: $color-white-1;
+  }
+
+  @for $i from 13 through 18 {
+    html.\--scroll-#{$i} & {
+      border-right-width: $i * 1px;
+    }
+  }
+}
+
+.hp-container {
+  padding: 0 rem(16);
+
+  @include mq($BREAKPOINT-LG) {
+    max-width: rem(1784);
+    margin: 0 auto;
+    padding: 0 rem(57);
+  }
+
+  .row {
+    @include mq($BREAKPOINT-LG) {
+      margin-left: rem(-13);
+      margin-right: rem(-13);
+
+      > * {
+        padding-left: rem(13);
+        padding-right: rem(13);
+      }
+    }
+  }
+}
+
+.container {
+  padding: 0 rem(30);
+
+  @include mq($BREAKPOINT-MD) {
+    padding: 0 rem(5);
+  }
+
+  @include mq($BREAKPOINT-XL) {
+    padding: 0 rem(135);
+  }
+}
+
+.page-container {
+  padding: 0 rem(16);
+
+  @include mq($BREAKPOINT-MD) {
+    max-width: rem(1704);
+    margin: 0 auto;
+  }
+}

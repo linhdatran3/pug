@@ -1,0 +1,8 @@
+extends ../_layouts/layout-component
+
+block append vars
+  - title = 'Footer'
+
+block container
+  +component('Footer')
+    include ../$modules/portfolio/footer

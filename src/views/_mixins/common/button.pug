@@ -1,0 +1,7 @@
+mixin button(href, text)
+  if href
+    +link(href, text).button&attributes(attributes)
+      span!= text
+  else
+    button.button&attributes(attributes)
+      span!= text

@@ -1,0 +1,7 @@
+mixin slider(listImages)
+  <div class="slider">
+    each item in listImages
+      <div class="slider__item">
+        <img src="!{item.imgUrl}" alt="!{item.alt}" />
+      </div>
+  </div>

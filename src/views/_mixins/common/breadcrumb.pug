@@ -1,0 +1,11 @@
+mixin breadcrumb(levels)
+  ul.breadcrumb&attributes(attributes)
+    li
+      +link('index.html', 'Home')
+    each level, index in levels
+      - var count = index + 1;
+      li.breadcrumb__item
+        if count < levels.length
+          +link(levels[index].link, levels[index].text)
+        else
+          span #{ levels[index].text }

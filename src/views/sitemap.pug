@@ -1,0 +1,96 @@
+extends _layouts/layout
+
+block append vars
+  - title = 'Sitemap'
+  - useHeader = false
+  - useFooter = false
+
+block mixin
+  mixin group(title)
+    details.page-container&attributes(attributes)
+      summary.h1.txt-center=title
+      .group-container
+        .row
+          block
+
+  mixin group-link(name, link, className)
+    .col-sm-3.col-md-3
+      a.button(href!=translateAssetPath(link, true) title=name class=className)=name
+
+block styles
+  style.
+    .site-map {
+      margin-bottom: 50px;
+    }
+
+    .site-map .page-container {
+      padding-top: 3rem;
+    }
+
+    .site-map .h1 {
+      background: antiquewhite;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .site-map .button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding-top: 5px;
+      background: #c9c9c9;
+      color: #000;
+    }
+
+    .site-map .button.ready {
+      background: #b0e1b0;
+    }
+
+    .site-map .button.ready-page {
+      background: #9fd0e7;
+    }
+
+    .site-map .group-container {
+      margin-top: 10px;
+    }
+
+    ul.page-tab-item {
+      padding: 0 20px;
+      display: flex;
+      margin: 30px 0 0;
+    }
+
+    ul.page-tab-item li {
+      margin-right: 20px;
+    }
+
+    ul.page-tab-item a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: 'NexaBlack';
+      display: inline-block;
+      padding: 16px 30px 10px;
+      border-radius: 30px;
+      background-color: #25AAE0;
+      font-size: 17px;
+    }
+
+    ul.page-tab-item li.active a {
+      background-color: #1285b5;
+    }
+
+
+block container
+  .site-map.container
+    .page-tab
+      .page-tab__content
+        .page-tab__pane(id="main")
+          +group('Screens')(open)
+            +group-link('1 - Homepage', '/index.html', 'ready')
+
+          +group('1 - Homepage')
+            +group-link('Header', '/preview/header.html', 'ready')
+            +group-link('Header 2', '/preview/header.html', 'ready')
+            +group-link('Footer', '/preview/footer.html', 'ready')
+            +group-link('Home', '/preview/home.html', 'ready')

@@ -1,0 +1,33 @@
+mixin card(item = {})
+  .card&attributes(attributes)
+    +link('/#', '').card__link
+    if item.tags
+      +tags(item.tags).card__tags
+    if item.extraTags
+      +tags(item.extraTags).card__tags.right
+    if item.pics
+      +picture(item.pics, item.title).card__img
+    if item.vid
+      video(disablepictureinpicture)
+        source(src=translateAssetPath(item.vid.src), type=item.vid.type)
+        p!= "Your browser doesn't support HTML5 video."
+      .play-icon
+    if !item.isHideTitle
+      .card__body
+        .card__item
+          p.card__title!= item.title
+          if item.desc
+            p.card__desc!= item.desc
+          if item.info
+            .card__info--wrapper
+              if item.info.location
+                .card__location!= item.info.location
+              if item.info.date
+                .card__date
+                  span.card__date--start!= item.info.date.start
+                  span.card__date--end!= `- ${item.info.date.end}`
+        if item.isHideAction
+        else
+          +link('/#', 'explore something').card__action
+            if item.icon
+              img.card__icon(src=item.icon)
